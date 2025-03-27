@@ -1,0 +1,19 @@
+{
+  "name": "nodefunctions",
+  "version": "1.0.0",
+  "description": "Azure Functions for CRUD operations on Student records in SQL Server",
+  "scripts": {
+    "start": "func start",
+    "watch": "func start --watch",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "@azure/functions": "^4.0.0",
+    "mssql": "^11.0.1",
+    "sequelize": "^6.32.0"
+  },
+  "devDependencies": {
+
+  },
+  "main": "src/{index.js,functions/*.js}"
+}
