@@ -2,12 +2,14 @@
 const isLocalhost = window.location.hostname === 'localhost' || 
                     window.location.hostname === '127.0.0.1';
 
-// Use the appropriate API URL based on environment
+// Fix indentation here
 const BASE_URL = isLocalhost 
                 ? import.meta.env.VITE_LOCAL_API_URL 
-                : import.meta.env.VITE_AZURE_API_URL;
+                : (import.meta.env.VITE_AZURE_API_URL || '/api');                    
 
-console.log('Using API URL:', BASE_URL);export const fetchStudents = async () => {
+console.log('Using API URL:', BASE_URL);
+
+export const fetchStudents = async () => {
     console.log('Fetching students from:', `${BASE_URL}/students`);
     const response = await fetch(`${BASE_URL}/students`);
     if (!response.ok) {
